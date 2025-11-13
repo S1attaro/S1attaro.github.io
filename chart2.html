@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-970be1b63a5813f2166d41ee429867a2"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"param": "param_ad3c5f227b57b6ad", "value": "steelblue"}, "value": "lightgray"}, "tooltip": [{"field": "County", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Count", "type": "quantitative"}, "y": {"field": "County", "sort": "-x", "type": "nominal"}}, "height": 400, "params": [{"name": "param_ad3c5f227b57b6ad", "select": {"type": "point", "fields": ["County"]}}], "title": "Top 15 Counties by Number of Licenses (Click to Highlight)", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-970be1b63a5813f2166d41ee429867a2": [{"County": "COOK", "Count": 4743}, {"County": "DUPAGE", "Count": 534}, {"County": "WILL", "Count": 398}, {"County": "LAKE", "Count": 367}, {"County": "KANE", "Count": 259}, {"County": "WINNEBAGO", "Count": 168}, {"County": "SAINT CLAIR", "Count": 160}, {"County": "MADISON", "Count": 150}, {"County": "SANGAMON", "Count": 141}, {"County": "MCHENRY", "Count": 130}, {"County": "PEORIA", "Count": 110}, {"County": "INDIANA", "Count": 101}, {"County": "MCLEAN", "Count": 92}, {"County": "MACON", "Count": 89}, {"County": "CHAMPAIGN", "Count": 83}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
