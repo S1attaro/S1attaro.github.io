@@ -1,0 +1,36 @@
+---
+layout: default
+title: HW5.1 - Jekyll Webpage
+---
+
+<h1>HW5.1 – Jekyll Webpage</h1>
+
+<p>
+  <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv"><strong>The Data</strong></a>
+</p>
+
+<p>
+  <a href="https://github.com/S1attaro/S1attaro.github.io/blob/main/hw5_1.ipynb"><strong>The Analysis Notebook</strong></a>
+</p>
+
+<h2>Visualization 1 – License Distribution by Type and Status</h2>
+
+<iframe src="chart1.html" width="700" height="450" style="border:none;"></iframe>
+
+<p>
+  This first chart shows how many business licenses belong to each license type and how those licenses are divided by status. I used a bar chart because it clearly compares different categories. The x-axis shows the license types, and the y-axis shows the number of licenses in each group. I used color to show the different license statuses, which helps you see how each type is split between statuses like Active or Not Renewed. To prepare the data, I grouped it by both <code>License Type</code> and <code>License Status</code> and counted how many records were in each group.
+</p>
+
+<h2>Visualization 2 – Top 15 Counties by Number of Licenses (Interactive)</h2>
+
+<iframe src="chart2.html" width="700" height="450" style="border:none;"></iframe>
+
+<p>
+  The second chart shows the top 15 counties with the highest number of business licenses. The x-axis shows the number of licenses, and the y-axis lists each county. I added click-to-select interactivity so a selected county is highlighted. Before plotting, I grouped the data by <code>County</code> and selected the 15 counties with the highest totals.
+</p>
+
+<h2>Interactivity Explanation</h2>
+
+<p>
+  The interactivity in my second chart lets you click on a county to highlight it. This makes the visualization easier to read because your selected county stands out while the others fade into the background. It also helps compare values more clearly.
+</p>
